@@ -1,0 +1,185 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-image: url('../images/bells.jpg');
+}
+
+.container {
+  padding: 10px;
+  /* background-color: #FFEFD5; */
+  height: 100vh;
+  width: 100vw;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title_container {
+  width: 100%;
+  height:6vh;
+}
+
+#title {
+  font-size: 40px;
+  text-align: center;
+  color: white;
+}
+
+.score_container {
+  width: 100%;
+  color: red;
+  height:4vh;
+  font-size: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: serif;
+  text-align: center;
+}
+
+.game_container {
+  height:70%;
+  width:100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game {
+  position: relative;
+  height:100%;
+  width:100%;
+  display: flex;
+  /* flex-direction: column; */
+  /* justify-content: bottom; */
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: bottom;
+}
+
+.towers {
+  position:absolute;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 20px;
+  z-index: 2;
+}
+
+.towers_poles {
+  position:absolute;
+  /* bottom: 0; */
+  /* left: 0; */
+  /* width: calc(20vw*3 + 20px*2); */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 20px;
+  /* background-color: yellow; */
+  z-index: 1;
+}
+
+.tower {
+  height: 60vh;
+  width: 20vw;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: bottom;
+}
+
+.towerpole {
+  height: 60vh;
+  width: 20vw;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: bottom;
+}
+.pole{
+  height: 100%;
+  width: 1.5vw;
+  z-index: 2;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  /* background-color: #873600; */
+  background: linear-gradient(90deg, black 0%, #6E2C00 30%, #873600 45%);
+}
+
+
+.disk {
+  height: 4vh;
+  /* width: 30px; */
+  /* background: rgb(133, 193, 233); */
+  /* background: rgb(2,0,36); */
+  background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(34, 153, 84,0.9140843837535014) 38%);
+  position: relative;
+  bottom:0;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+  border-top: 1px solid gray;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.diskmove:hover {
+  cursor: move;
+}
+.base_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.base {
+  background-color: #873600;
+  height:8vh;
+  width:80vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#winner {
+  position:absolute;
+  display: none;
+  height:100%;
+  width: 100%;
+  z-index:5;
+}
+.winner_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  text-align: center;
+  color: white;
+  height:100%;
+  width: 100%;
+  /* visibility: hidden; */
+}
+.won {
+  font-family: fantasy;
+  font-size: 2em;
+  font-weight: bold;
+}
+#level_select {
+  height:100%;
+  position:absolute;
+  width: 100%;
+  z-index:5;
+}
+.level_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  text-align: center;
+  color: white;
+  height:100%;
+  width: 100%;
+
+}

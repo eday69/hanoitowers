@@ -1,0 +1,52 @@
+
+<link href='style/hanoi.css' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src='js/moveelements.js'></script>
+
+
+<body>
+<div class='full_container'>
+  <div class='title_container'>
+    <div id='title'>Hanoi Towers</div>
+  </div>
+  <div class='score_container'><div>Moves</div><div id='score'>0</div>
+  </div>
+  <div class='game_container'>
+    <div class='game'>
+
+      <div class='towers'>
+        <div data-draggable="target" id='tower1' class='tower'></div>
+        <div data-draggable="target" id='tower2' class='tower'></div>
+        <div data-draggable="target" id='tower3' class='tower'></div>
+        <div id='level_select'>
+          <div class='level_text'>
+            <div class='won'>Welcome to my version of Hanoi Towers !</div>
+            <div class='thank you'>Please select a level to start with:</div>
+            <select id='selectlevel' onChange='runLevel()' name='selectlevel'>
+            </select>
+          </div>
+        </div>
+        <div id='winner'>
+          <div class="winner_text">
+            <div class='won'>You Won !!!</div>
+            <div class='thankyou'>Thank you for playing</div>
+            <div class='thankyou'>&nbsp;</div>
+            <button onclick="askLevel();">Another?</button>
+          </div>
+        </div>
+      </div>
+
+      <div class='towers_poles'>
+        <div id='towerpole1' class='towerpole'><div class='pole'></div></div>
+        <div id='towerpole2' class='towerpole'><div class='pole'></div></div>
+        <div id='towerpole3' class='towerpole'><div class='pole'></div></div>
+      </div>
+    </div>
+  </div>
+  <div class='base_container'>
+    <div class='base'></div>
+  </div>
+</div>
+
+
+
+</body>
